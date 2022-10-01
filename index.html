@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;      
+    }
+
+    :root {
+      --Very-dark-blue: hsl(217, 54%, 11%);
+      --dark-blue: hsl(216, 50%, 16%);
+      --blue: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+      --Gray-blue: #8BACD9;
+    }
+    body {
+      background: var(--Very-dark-blue);
+      margin: 0;
+      height: 100vh;;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family:'Outfit', 'Courier New', Courier, monospace;
+    }
+    .element-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 25rem;
+      border-radius: 20px;
+      background-color: var(--dark-blue);
+      padding: 2rem;
+      box-shadow: -1rem 2rem 5rem rgb(3, 3, 27), 1rem 2rem 2rem rgb(3, 3, 27);
+    }
+    .image-container {
+      width: 100%;
+      border-radius: 12px;
+      position: relative;
+      background-color: #00FFF8;
+      display: flex;
+      justify-content: center
+    }
+    .equilibrium-img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;   
+      position: relative; 
+      opacity: 1;
+    }
+    .image-container:hover .equilibrium-img {     
+      opacity: 0.4;
+      border: none; 
+    }
+    .overlay-img { 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      cursor: pointer;
+      transform: translate(-50%, -50%);    
+      display: none;
+    } 
+    .image-container:hover .overlay-img {     
+      display: flex;
+    }
+    h1 {
+      color: var(--White);
+      font-size: 1.5rem;
+      text-align: left;
+      width: 100%;
+      margin: 1.3rem 0 0 0;
+      cursor: pointer;
+    }
+    h1:hover { color: #00FFF8; }
+    h2 {
+      color: var(--Gray-blue);
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-align: left;
+      width: 100%;
+    }
+    .cripto-price-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .sml-cripto-cont {
+      display: flex;
+      align-items: center;  
+      margin: 1rem 0;
+    }
+    .eth-price{
+      color: #00FFF8;  
+      margin: 0 0 0 0.5rem;
+    }
+    .timer {
+      color: var(--Gray-blue);
+      margin: 0 0 0 0.5rem;
+    }
+    hr {
+      width: 100%;
+      border-color: var(--Gray-blue);
+      outline: none;
+      border-bottom: 1px;
+      margin: 1rem 0;
+    }
+    .credentials-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: start;
+    }
+    .credentials-container img {
+      width: 2.2rem;
+      border-radius: 50%;
+      outline: 1px white solid;
+    }
+    .credentials { margin: 0 0 0 1rem; color: var(--Gray-blue); }
+    .credentials a { color: var(--White); cursor: pointer; }
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; color: #00FFF8;}
+    a:active { text-decoration: none; }
+
+    .attribution { font-size: 11px; text-align: center; color: var(--White); margin: 2rem 0;}
+    .attribution a { color: hsl(228, 88%, 77%); }
+  </style>
+
+</head>
+<body>
+  <main>
+    <div class="element-container">
+      
+      <div class="image-container" >
+        <img class="equilibrium-img" src="./images/image-equilibrium.jpg" alt="crypto logo" />
+        <img class="overlay-img" src="./images/icon-view.svg" alt="eye icon" />
+      </div>
+      <h1> Equilibrium #3429 </h1>
+      <h2> Our Equilibrium collection promotes balance and calm. </h2>
+      <div class="cripto-price-container">
+        <div class="sml-cripto-cont">
+          <img src="./images/icon-ethereum.svg" alt="ethereum logo" />
+          <p class="eth-price">0.041 ETH</p>
+        </div>
+        <div class="sml-cripto-cont">
+          <img src="./images/icon-clock.svg" alt="ethereum logo" />
+          <p class="timer">3 days left</p>
+        </div>
+      </div>
+      <hr />
+      <div class="credentials-container">
+        <img src="./images/image-avatar.png" alt="photo of author">
+        <p class="credentials"> Creation of <a href="#">Jules Wyvern</a></p>
+      </div> 
+      
+    </div>  
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/WhiteFatal">Night</a>.
+    </div>
+  </main>
+</body>
+</html>
